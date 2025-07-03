@@ -2,10 +2,14 @@
 
 #include <cstdint>
 
+#ifdef _WIN32
 #ifdef TIL_EXPORTS
 #define TIL_API __declspec(dllexport)
 #else
 #define TIL_API __declspec(dllimport)
+#endif
+#else
+#define TIL_API __attribute__((visibility("default")))
 #endif
 
 extern "C" {
