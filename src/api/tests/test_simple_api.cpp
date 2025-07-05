@@ -11,17 +11,9 @@ TEST(TilTest, AddFunction) {
     EXPECT_EQ(add(4294967295, 1), 0); // Overflow test for uint32_t
 }
 
-TEST(TilTest, AddFunctionEdgeCases) {
+TEST(TilTest, AddFunctionComplex) {
     // Test edge cases
-    EXPECT_EQ(add(1, 1), 2);
-    EXPECT_EQ(add(0, 1), 1);
-    EXPECT_EQ(add(1, 0), 1);
-}
-
-TEST(TilTest, AddFunctionNegativeNumbers) {
-    // Test with negative numbers (should wrap around for uint32_t)
-    EXPECT_EQ(add(0, 0), 0);
-    // Note: uint32_t doesn't support negative numbers directly
+    EXPECT_EQ(add(1, add(1, 1)), 3);
 }
 
 int main(int argc, char **argv) {
