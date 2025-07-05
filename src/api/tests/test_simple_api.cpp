@@ -8,7 +8,7 @@ TEST(TilTest, AddFunction) {
     EXPECT_EQ(add(100, 200), 300);
     
     // Test with large numbers
-    EXPECT_EQ(add(4294967295, 1), 0); // Overflow test for uint32_t
+    EXPECT_EQ(add(UINT32_MAX, 1), 0); // Overflow test for uint32_t
 }
 
 TEST(TilTest, AddFunctionComplex) {

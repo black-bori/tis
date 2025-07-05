@@ -36,7 +36,6 @@ set_target_properties(til_tests PROPERTIES
 # Link libraries for tests
 target_link_libraries(til_tests PRIVATE
     til
-    gtest
     gtest_main
 )
 
