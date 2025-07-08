@@ -13,6 +13,10 @@ target_include_directories(til PUBLIC
 
 target_compile_definitions(til PRIVATE TIL_EXPORTS)
 
+target_link_libraries(til PRIVATE
+    core_lib
+)
+
 set_target_properties(til PROPERTIES
     OUTPUT_NAME "til"
     CXX_STANDARD 17
