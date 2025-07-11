@@ -16,6 +16,13 @@ TEST(TilTest, AddFunctionComplex) {
     EXPECT_EQ(add(1, add(1, 1)), 3);
 }
 
+TEST(TilTest, TesterOnly) {
+    til::TesterOnly test(3, 5);
+
+    EXPECT_EQ(test.add(), 8);
+    EXPECT_EQ(test.mul(), 15);
+}
+
 int main(int argc, char **argv) {
     ::testing::InitGoogleTest(&argc, argv);
     return RUN_ALL_TESTS();
